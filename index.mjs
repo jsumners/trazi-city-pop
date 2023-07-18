@@ -11,7 +11,7 @@ const server = Fastify({
   }
 })
 const csvFileUrl = new URL('./city_populations.csv', import.meta.url)
-const stateFile = process.env.STATE_FILE ?? './city_populations.updated.csv'
+const stateFile = process.env.STATE_FILE ?? './city_populations.csv'
 const stateFileUrl = new URL(stateFile, import.meta.url)
 
 // The stateFileUrl is where we will persist any changes made by PUT requests
